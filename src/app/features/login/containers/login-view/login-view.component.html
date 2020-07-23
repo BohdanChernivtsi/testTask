@@ -1,6 +1,6 @@
 <app-login
   [user]="(authService.user | async)"
-  (signup)="signup($event)"
-  (login)="login($event)"
-  (logout)="logout()"
+  (signupEmitter)="signup($event)"
+  (loginEmitter)="login($event)"
+  (logoutEmitter)="logout()"
 ></app-login>

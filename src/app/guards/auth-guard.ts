@@ -1,9 +1,9 @@
 import { Injectable, OnDestroy } from '@angular/core'
-import { Route, UrlSegment, Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router'
+import { Router, CanActivate, UrlTree } from '@angular/router'
 import { Observable, Subject } from 'rxjs'
+import { takeUntil } from 'rxjs/operators'
 
 import { AuthService } from '../services/auth.service'
-import { takeUntil } from 'rxjs/operators'
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ import { takeUntil } from 'rxjs/operators'
 export class AuthGuard implements CanActivate, OnDestroy {
   user
   destroySubject$ = new Subject()
-  
+
   constructor(private authService: AuthService, private router: Router) {
     this.authService.user.pipe(
         takeUntil(this.destroySubject$)
@@ -21,11 +21,8 @@ export class AuthGuard implements CanActivate, OnDestroy {
 
   }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean|UrlTree>|Promise<boolean|UrlTree>|boolean|UrlTree {
-    
+  canActivate(): Observable<boolean|UrlTree>|Promise<boolean|UrlTree>|boolean|UrlTree {
+
       if (this.user) {
           return true
       } else {

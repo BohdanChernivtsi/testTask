@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators'
 import { PostsService } from '../../../services/posts.service'
 import { PostsActionTypes, loadPosts, loadPostsSuccess, loadPostsError } from './posts.actions'
 import { PostsState } from './posts.reducer'
-import { Post } from 'src/app/models/post.model'
+import { Post } from '../../../models/post.model'
 
 @Injectable()
 export class PostsEffects {

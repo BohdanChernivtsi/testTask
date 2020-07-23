@@ -3,10 +3,10 @@ import { createEffect } from '@ngrx/effects'
 import { DataPersistence } from '@nrwl/nx'
 import { map } from 'rxjs/operators'
 
-import { UsersService } from 'src/app/services/users.service'
+import { UsersService } from '../../services/users.service'
 import { TableState } from './table.reducer'
 import { TableActionTypes, loadTableUsersError, loadTableUsers, loadTableUsersSuccess } from './table.actions'
-import { TableUser } from 'src/app/models/table-user.model'
+import { TableUser } from '../../models/table-user.model'
 
 @Injectable()
 export class TableEffects {

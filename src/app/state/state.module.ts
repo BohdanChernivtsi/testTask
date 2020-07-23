@@ -4,7 +4,6 @@ import { EffectsModule } from '@ngrx/effects'
 import { StoreModule } from '@ngrx/store'
 
 import { StoreKey } from './constants'
-
 import { tableReducer } from './table/table.reducer'
 import { homeReducers } from './home/home.reducer'
 import { TableEffects } from './table/table.effects'

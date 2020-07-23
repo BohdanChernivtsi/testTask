@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input, EventEmitter, Output } from '@angular/core'
-import { User } from 'src/app/models/user.model'
+
+import { User } from '../../../../models/user.model'
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,8 @@ import { User } from 'src/app/models/user.model'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent {
-  email: string
-  password: string
+  email = ''
+  password = ''
 
   @Output() signupEmitter = new EventEmitter<User>()
   @Output() loginEmitter = new EventEmitter<User>()

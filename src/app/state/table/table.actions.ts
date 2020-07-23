@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http'
 import { createAction, props } from '@ngrx/store'
 
-import { TableUser } from 'src/app/models/table-user.model'
+import { TableUser } from '../../models/table-user.model'
 
 
 export enum TableActionTypes {
