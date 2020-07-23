@@ -9,6 +9,6 @@ export interface HomeState {
 }
 
 export const homeReducers: ActionReducerMap<HomeState> = {
-    posts: postsReducer,
-    images: imagesReducer,
+  posts: postsReducer,
+  images: imagesReducer,
 }

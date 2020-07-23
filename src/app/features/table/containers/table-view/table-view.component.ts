@@ -16,5 +16,4 @@ export class TableViewComponent implements OnInit {
   ngOnInit(): void {
     this.tableFacade.getTableUsers()
   }
-
 }

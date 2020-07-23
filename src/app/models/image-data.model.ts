@@ -1,3 +1,3 @@
 export interface ImageData {
-    data: string[]
+  data: string[]
 }

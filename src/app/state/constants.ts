@@ -1,5 +1,5 @@
 export enum StoreKey {
-    Home = 'home',
-    Table = 'table',
-    User = 'user',
+  Home = 'home',
+  Table = 'table',
+  User = 'user',
 }

@@ -9,14 +9,14 @@ import { User } from '../../../../models/user.model'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent {
-  email = ''
-  password = ''
-
   @Output() signupEmitter = new EventEmitter<User>()
   @Output() loginEmitter = new EventEmitter<User>()
   @Output() logoutEmitter = new EventEmitter()
 
-  @Input() user
+  @Input() user: User
+
+  email = ''
+  password = ''
 
   signup() {
     this.signupEmitter.emit({
