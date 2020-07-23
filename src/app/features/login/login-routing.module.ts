@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './login.component';
+import { LoginViewComponent } from './containers/login-view/login-view.component';
 
-const routes: Routes = [{ path: '', component: LoginComponent }];
+const routes: Routes = [{ path: '', component: LoginViewComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
