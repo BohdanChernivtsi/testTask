@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-
-import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TableComponent implements OnInit {
-
-  constructor(private usersService: UsersService) { }
+export class TableComponent {
   modules = [ClientSideRowModelModule];
   columnDefs = [
     {headerName: 'Name', field: 'name', sortable: true, filter: true},
@@ -18,10 +15,5 @@ export class TableComponent implements OnInit {
     {headerName: 'Email', field: 'email', sortable: true, filter: true}
   ];
 
-  rowData$
-
-  ngOnInit(): void {
-    this.rowData$ = this.usersService.getUsers()
-  }
-
+  @Input() rowData
 }

@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { combineLatest } from 'rxjs'
 
-import { PostsService } from '../../services/posts.service';
-import { ImagesService } from '../../services/images.service';
+import { PostsService } from '../../../../services/posts.service';
+import { ImagesService } from '../../../../services/images.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-home-view',
+  templateUrl: './home-view.component.html',
+  styleUrls: ['./home-view.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeViewComponent implements OnInit {
   sliderData$
   constructor(private postsService: PostsService, private imagesService: ImagesService) { }
 

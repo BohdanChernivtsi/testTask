@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AgGridModule } from '@ag-grid-community/angular'
 
 import { TableRoutingModule } from './table-routing.module';
-import { TableComponent } from './table.component';
+import { TableViewComponent } from './containers/table-view/table-view.component';
+import { TableComponent } from './components/table/table.component';
 
 
 @NgModule({
-  declarations: [TableComponent],
+  declarations: [TableComponent, TableViewComponent],
   imports: [
     CommonModule,
     TableRoutingModule,

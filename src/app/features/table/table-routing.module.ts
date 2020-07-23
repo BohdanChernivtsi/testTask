@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TableComponent } from './table.component';
+import { TableViewComponent } from './containers/table-view/table-view.component';
 
-const routes: Routes = [{ path: '', component: TableComponent }];
+const routes: Routes = [{ path: '', component: TableViewComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
