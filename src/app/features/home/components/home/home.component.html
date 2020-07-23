@@ -1,5 +1,10 @@
-<ngb-carousel *ngIf="sliderData">
-    <ng-template *ngFor="let post of sliderData.posts let i = index" ngbSlide>
-      <app-post [imageSrc]="sliderData.images[i]" [title]="post.title" [description]="post.body"></app-post>
-    </ng-template>
+<ngb-carousel *ngIf="sliderData" class="mx-auto" style="width: 900px">
+  <ng-template *ngFor="let post of sliderData.posts let i = index" ngbSlide>
+    <app-post
+      [imageSrc]="sliderData.images[i]"
+      [title]="post.title"
+      [description]="post.body"
+    >
+    </app-post>
+  </ng-template>
 </ngb-carousel>

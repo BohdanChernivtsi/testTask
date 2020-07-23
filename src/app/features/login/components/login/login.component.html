@@ -1,18 +1,45 @@
-<h1 *ngIf="user">Welcome {{ user?.email }}!</h1>
+<h1 *ngIf="user" class="mx-auto mt-5" style="width: 200px;">Welcome {{ user?.email }}!</h1>
 
-<div *ngIf="!user">
-  <input type="text" [value]="email" (input)="email=$event.target.value" placeholder="email">
-  <input type="password" [value]="password" (input)="password=$event.target.value" placeholder="password">
+<div *ngIf="!user" class="mx-auto mt-5" style="width: 200px;">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="email"
+    [value]="email"
+    (input)="email=$event.target.value"
+  >
+  <input
+    type="password"
+    class="form-control"
+    placeholder="password"
+    [value]="password"
+    (input)="password=$event.target.value"
+  >
 
-  <button (click)="signup()" [disabled]="!email || !password">
+  <button
+    type="button"
+    class="btn btn-primary m-1"
+    [disabled]="!email || !password"
+    (click)="signup()"
+  >
     Signup
   </button>
 
-  <button (click)="login()" [disabled]="!email || !password">
+  <button
+    type="button"
+    class="btn btn-primary m-1"
+    [disabled]="!email || !password"
+    (click)="login()"
+  >
     Login
   </button>
 </div>
 
-<button (click)="logout()" *ngIf="user">
+<button
+  *ngIf="user"
+  type="button"
+  class="btn btn-primary m-5"
+  (click)="logout()"
+>
   Logout
 </button>

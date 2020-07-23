@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core'
 
 import { TableFacade } from '../../../../state/table/table.facade'
 
 @Component({
   selector: 'app-table-view',
   templateUrl: './table-view.component.html',
-  styleUrls: ['./table-view.component.scss']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableViewComponent implements OnInit {
 

@@ -1,3 +1,9 @@
-<app-table
-  [rowData]="(rowData$ | async)?.tableUsers"
-></app-table>
+<h1 class="mx-auto mt-5" style="width: 300px;">Table of users</h1>
+<div
+  class="mx-auto"
+  style="width: 500px"
+>
+  <app-table
+    [rowData]="(rowData$ | async)?.tableUsers"
+  ></app-table>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core'
 import { map } from 'rxjs/operators'
 import { combineLatest } from 'rxjs'
 
@@ -9,7 +9,7 @@ import { ImagesState } from '../../../../state/home/images/images.reducer'
 @Component({
   selector: 'app-home-view',
   templateUrl: './home-view.component.html',
-  styleUrls: ['./home-view.component.scss']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeViewComponent implements OnInit {
   sliderData$ = combineLatest([this.homeFacade.postsState$, this.homeFacade.imagesState$])
