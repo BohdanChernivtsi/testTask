@@ -1,1 +1,10 @@
-<p>table works!</p>
+<ag-grid-angular
+    style="width: 500px; height: 500px;"
+    class="ag-theme-alpine"
+    [modules]="modules"
+    [rowData]="rowData$ | async"
+    [columnDefs]="columnDefs"
+    [pagination]="true"
+    >
+</ag-grid-angular>
+<!-- //class="ag-theme-material" -->
