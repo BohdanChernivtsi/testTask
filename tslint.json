@@ -71,7 +71,8 @@
       true,
       "single"
     ],
-    "trailing-comma": false,
+    "trailing-comma": true,
+    "semicolon":false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
@@ -80,7 +81,7 @@
     "no-output-on-prefix": true,
     "no-output-rename": true,
     "no-outputs-metadata-property": true,
-    "template-banana-in-box": true,
+    "template-banana-in-box": false,
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true

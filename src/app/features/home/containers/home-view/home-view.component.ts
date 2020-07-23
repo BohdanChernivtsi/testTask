@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core'
+import { map } from 'rxjs/operators'
 import { combineLatest } from 'rxjs'
 
-import { HomeFacade } from 'src/app/state/home/home.facade';
-import { PostsState } from 'src/app/state/home/posts/posts.reducer';
-import { ImagesState } from 'src/app/state/home/images/images.reducer';
+import { HomeFacade } from 'src/app/state/home/home.facade'
+import { PostsState } from 'src/app/state/home/posts/posts.reducer'
+import { ImagesState } from 'src/app/state/home/images/images.reducer'
 
 @Component({
   selector: 'app-home-view',

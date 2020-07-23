@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
-import { AuthService } from '../../../../services/auth.service';
-import { User } from 'src/app/models/user.model';
+import { AuthService } from '../../../../services/auth.service'
+import { User } from 'src/app/models/user.model'
 
 @Component({
   selector: 'app-login-view',
@@ -13,15 +13,15 @@ export class LoginViewComponent {
   constructor(public authService: AuthService) {}
 
   signup(user: User) {
-    this.authService.signup(user.email, user.password);
+    this.authService.signup(user.email, user.password)
   }
 
   login(user: User) {
-    this.authService.login(user.email, user.password);
+    this.authService.login(user.email, user.password)
   }
 
   logout() {
-    this.authService.logout();
+    this.authService.logout()
   }
 
 }

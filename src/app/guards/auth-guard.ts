@@ -1,9 +1,9 @@
-import { Injectable, OnDestroy } from '@angular/core';
-import { Route, UrlSegment, Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Injectable, OnDestroy } from '@angular/core'
+import { Route, UrlSegment, Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router'
+import { Observable, Subject } from 'rxjs'
 
-import { AuthService } from '../services/auth.service';
-import { takeUntil } from 'rxjs/operators';
+import { AuthService } from '../services/auth.service'
+import { takeUntil } from 'rxjs/operators'
 
 @Injectable({
     providedIn: 'root'

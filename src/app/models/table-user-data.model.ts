@@ -1,4 +1,4 @@
-import { TableUser } from './table-user.model';
+import { TableUser } from './table-user.model'
 
 export interface TableUserData {
     data: TableUser[]

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
-import { TableFacade } from 'src/app/state/table/table.facade';
+import { TableFacade } from 'src/app/state/table/table.facade'
 
 @Component({
   selector: 'app-table-view',

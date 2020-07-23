@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { PreloadAllModules } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
+import { PreloadAllModules } from '@angular/router'
 
-import { AuthGuard } from './guards/auth-guard';
+import { AuthGuard } from './guards/auth-guard'
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full'
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(
