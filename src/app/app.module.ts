@@ -9,6 +9,10 @@ import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StateModule } from './state/state.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { NxModule } from '@nrwl/nx';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    StateModule,
+    EffectsModule.forRoot([]),
+    StoreModule.forRoot([]),
+    NxModule.forRoot(),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

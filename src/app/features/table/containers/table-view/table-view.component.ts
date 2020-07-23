@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
-import { UsersService } from '../../../../services/users.service';
+import { TableFacade } from 'src/app/state/table/table.facade';
 
 @Component({
   selector: 'app-table-view',
@@ -10,12 +9,12 @@ import { UsersService } from '../../../../services/users.service';
 })
 export class TableViewComponent implements OnInit {
 
-  constructor(private usersService: UsersService) { }
+  constructor(private tableFacade: TableFacade) { }
 
-  rowData$
+  rowData$ = this.tableFacade.tableState$
 
   ngOnInit(): void {
-    this.rowData$ = this.usersService.getUsers()
+    this.tableFacade.getTableUsers()
   }
 
 }
